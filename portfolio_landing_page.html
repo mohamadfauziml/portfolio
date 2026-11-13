@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Fauzi Lazim — Vocational Trainer & IoT Specialist</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        handwriting: ['"Caveat"', 'cursive'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0f172a',
+                            950: '#090d16',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.05)',
+                        'card': '0 4px 20px -2px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden">
+
+    <!-- ==========================================
+         A. HEADER / NAVIGATION BAR
+    =========================================== -->
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-extrabold tracking-tight text-slate-900">
+                    FauziLazim<span class="text-brand-600">.</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-7">
+                    <a href="#home" class="text-sm font-semibold text-brand-600 border-b-2 border-brand-600 pb-1">Home</a>
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">About &amp; Credentials</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Training &amp; Roles</a>
+                    <a href="#portfolio" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Publications &amp; Awards</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Experience</a>
+                </nav>
+
+                <!-- Mobile Menu Trigger -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100" aria-label="Menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#home" class="block px-3 py-2.5 rounded-xl text-base font-semibold text-brand-600 bg-brand-50">Home</a>
+            <a href="#about" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50">About &amp; Credentials</a>
+            <a href="#services" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50">Training &amp; Roles</a>
+            <a href="#portfolio" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50">Publications &amp; Awards</a>
+            <a href="#experience" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50">Experience</a>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         B. HERO SECTION
+    =========================================== -->
+    <section id="home" class="relative bg-gradient-to-b from-slate-50/80 to-white pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Kolum Kiri: Mesej Utama -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        MOHAMAD FAUZI BIN MOHD LAZIM
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+                        Vocational <span class="text-brand-600">Trainer</span> &amp;<br class="hidden sm:block" />
+                        IoT Engineering Specialist
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Vocational Trainer at <strong>TVETMARA Petaling Jaya</strong> (Department of Electronic - IoT Engineering), Registered Graduate Engineer (BEM), Registered Graduate Technologist (MBOT), and Certified Educator by Microsoft &amp; Canva.
+                    </p>
+                    
+                    <!-- Butang CTA -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button onclick="openContactModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-full shadow-md shadow-brand-600/20 transition-all cursor-pointer">
+                            Book Consultation / Training
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                        <a href="#portfolio" class="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-800 font-semibold px-7 py-3.5 rounded-full border border-slate-300 transition-all">
+                            Explore Publications &amp; Awards
+                        </a>
+                    </div>
+
+                    <!-- Metrik / Sosial Bukti -->
+                    <div class="grid grid-cols-3 gap-4 sm:gap-8 pt-8 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">17+</p>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-1">Years in TVET &amp; Eng.</p>
+                        </div>
+                        <div class="border-l border-slate-200 pl-4 sm:pl-8">
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">14+</p>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-1">Innovation Medals</p>
+                        </div>
+                        <div class="border-l border-slate-200 pl-4 sm:pl-8">
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">25+</p>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-1">Jury, Speaker &amp; Panel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolum Kanan: Visual & Elemen Terapung -->
+                <div class="lg:col-span-5 relative flex justify-center items-center">
+                    <!-- Elemen Bulat Latar Belakang -->
+                    <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-brand-100/70 border-[16px] border-brand-600/10 flex items-center justify-center relative">
+                        <div class="w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-brand-600/10"></div>
+                    </div>
+
+                    <!-- Gambar Potret Utama -->
+                    <div class="absolute inset-0 flex justify-center items-center">
+                        <div class="w-60 h-60 sm:w-72 sm:h-72 rounded-full overflow-hidden border-8 border-white shadow-xl bg-slate-100">
+                            <img 
+                                src="https://i.postimg.cc/CKvbLTxW/FAUZI-BIN-MOHD-LAZIM.png" 
+                                onerror="this.src='https://placehold.co/450x450/e2e8f0/1e293b?text=M.+Fauzi+Lazim'"
+                                alt="Mohamad Fauzi bin Mohd Lazim" 
+                                class="w-full h-full object-cover object-top"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Micro-copy Tulisan Tangan -->
+                    <div class="hidden sm:block absolute -top-2 right-0 lg:-right-2 text-right transform -rotate-6">
+                        <p class="font-handwriting text-2xl text-slate-700 leading-tight">
+                            Empowering TVET,<br>IoT &amp; Digital Innovation
+                        </p>
+                        <svg class="w-10 h-10 text-brand-600 ml-auto mt-1" viewBox="0 0 50 50" fill="none">
+                            <path d="M40 5C35 20 20 30 8 32M8 32L16 24M8 32L17 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <!-- Kad Terapung: Pengiktirafan -->
+                    <div class="absolute -bottom-3 right-2 sm:right-4 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-xs">
+                            BEM
+                        </div>
+                        <div>
+                            <p class="text-[11px] text-slate-400 font-medium">Registered Graduate Engineer</p>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xs font-bold text-slate-800">BEM &bull; MBOT &bull; CIAST</span>
+                                <i data-lucide="badge-check" class="w-4 h-4 text-brand-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         C. ABOUT ME, EDUCATION & CERTIFICATIONS
+    =========================================== -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Kolum Kiri: Pendidikan & Ringkasan Profil -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-100 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-2xl bg-brand-600 text-white flex items-center justify-center">
+                                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">ACADEMIC BACKGROUND</span>
+                                <h3 class="text-xl font-extrabold text-slate-900">Education</h3>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5 border-l-2 border-brand-200 pl-5 ml-2">
+                            <div class="relative">
+                                <span class="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-brand-600 ring-4 ring-white"></span>
+                                <span class="inline-block text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-0.5 rounded-full mb-1">2018</span>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Master of Engineering Technology (Green and Energy Efficient Building)</h4>
+                                <p class="text-xs sm:text-sm text-slate-500 mt-1">Universiti Kuala Lumpur, Malaysia &amp; Rosenheim University of Applied Sciences, Germany</p>
+                            </div>
+
+                            <div class="relative">
+                                <span class="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-slate-400 ring-4 ring-white"></span>
+                                <span class="inline-block text-xs font-bold text-slate-600 bg-slate-200/70 px-2.5 py-0.5 rounded-full mb-1">2008</span>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Bachelor of Engineering (Electrical)</h4>
+                                <p class="text-xs sm:text-sm text-slate-500 mt-1">Universiti Malaya (UM), Malaysia</p>
+                            </div>
+                        </div>
+
+                        <!-- Hubungi Pantas -->
+                        <div class="pt-4 border-t border-slate-200/80 space-y-2.5 text-xs sm:text-sm">
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="phone" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                <span>+60-162-700-575</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="mail" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                <span>fauzi.lazim@mara.gov.my / fauzibinlazim@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="globe" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                <a href="https://fauzilazim.notion.site/" target="_blank" class="text-brand-600 hover:underline font-medium">fauzilazim.notion.site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolum Kanan: Huraian & Pensijilan Profesional -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">ABOUT &amp; CREDENTIALS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Bridging Engineering, IoT &amp; Digital Education
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        Over 17 years of experience in Technical and Vocational Education and Training (TVET) within MARA. Expertise spans Internet of Things (IoT) solution development, Python programming &amp; Machine Learning, Canva visual design, and interactive digital e-book publishing.
+                    </p>
+
+                    <!-- Grid Pensijilan & Pengiktirafan -->
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Professional Certifications &amp; Recognition</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="award" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Registered Graduate Engineer &amp; Technologist</p>
+                                    <p class="text-[11px] text-slate-500">BEM (G192465A) &bull; MBOT (GT21110101)</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="user-check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">CIAST Pedagogy &amp; Accreditation</p>
+                                    <p class="text-[11px] text-slate-500">Pedagogy TM001 &bull; Malaysia Skills Accreditation (PPP-PPD-PPB)</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Microsoft Elevate &amp; MIEE Expert</p>
+                                    <p class="text-[11px] text-slate-500">MIEE (2022-2026) &bull; Elevate Expert (2026-2027) &bull; MCE</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="palette" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Canva Certified &amp; Trainer</p>
+                                    <p class="text-[11px] text-slate-500">Skolar Malaysia &amp; UMCCed &bull; AI in Classroom</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Industry 4.0, TRIZ &amp; Railway Signaling</p>
+                                    <p class="text-[11px] text-slate-500">ToT Big Data (MBOT-SIRIM) &bull; MATRIZ L1 &bull; UniKL-KCG</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">AKRAB MARA &amp; EdTech Ambassador</p>
+                                    <p class="text-[11px] text-slate-500">AKRAB (A2501567) &bull; Wakelet Leader &bull; Quizizz AI &bull; ClassPoint</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         D. SERVICES & ROLES SECTION
+    =========================================== -->
+    <section id="services" class="py-20 bg-slate-50/70 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Kolum Kiri: Tajuk & CTA -->
+                <div class="lg:col-span-4 space-y-5">
+                    <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">CONSULTATION &amp; TRAINING</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Expertise &amp; Roles</h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Active as a technical workshop trainer, national and international innovation competition judge, motivational speaker, and NOSS/CIAST curriculum development panelist.
+                    </p>
+                </div>
+
+                <!-- Kolum Kanan: Grid Kad 2x2 -->
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Kad 1: Technical & AI Trainer -->
+                    <div class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-card hover:shadow-soft hover:border-brand-200 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-brand-600 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                                <i data-lucide="terminal" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-brand-600">13+ Workshops</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Technical &amp; Digital Trainer</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-3">
+                            Conducting hands-on courses in <strong>Microsoft Power BI Dashboard Development</strong>, <strong>Python Programming</strong> (Machine Learning, CoDrone, Web &amp; App), <strong>Generative AI + Canva</strong>, and SCRIBE E-Book Bootcamps.
+                        </p>
+                    </div>
+
+                    <!-- Kad 2: Innovation Judge / Jury -->
+                    <div class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-card hover:shadow-soft hover:border-brand-200 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                <i data-lucide="gavel" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 text-purple-600">24+ Events</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Innovation Judge &amp; Jury</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-3">
+                            Appointed as a jury/judge for international and national competitions including <strong>INEX 2026</strong>, <strong>VIIC 2026</strong>, <strong>Arduino Innovators Challenge</strong>, <strong>MIIX</strong>, <strong>METARISE</strong>, and <strong>i-TeTa</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Kad 3: Speaker & AKRAB -->
+                    <div class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-card hover:shadow-soft hover:border-brand-200 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                <i data-lucide="mic" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600">AKRAB MARA</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Motivational &amp; Wellbeing Speaker</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-3">
+                            Featured speaker for personal development and mental wellbeing programs including <em>"Hidup Kita Pilihan Kita"</em> and <em>"My Mind My Care"</em> with AKRAB MARA KKTM Petaling Jaya.
+                        </p>
+                    </div>
+
+                    <!-- Kad 4: Curriculum & NOSS Panel -->
+                    <div class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-card hover:shadow-soft hover:border-brand-200 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                                <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-rose-50 text-rose-600">JPK &amp; CIAST</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Curriculum &amp; NOSS Panel</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-3">
+                            Development panelist for National Occupational Skills Standards (<strong>NOSS in Electronics Troubleshooting L1-L3</strong>, JPK) and <strong>eProfiling Development for IoT Lecturers</strong> with CIAST.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         E. PORTFOLIO: PUBLICATIONS & INNOVATION AWARDS
+    =========================================== -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header & Filter Tabs -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">PORTFOLIO &amp; ACHIEVEMENTS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Publications &amp; Innovation Awards</h2>
+                    <p class="text-slate-500 text-sm sm:text-base max-w-xl">
+                        A collection of registered e-ISBN publications alongside Gold, Silver, and Bronze medal achievements in national and international innovation competitions.
+                    </p>
+                </div>
+
+                <!-- Butang Filter Interaktif -->
+                <div class="flex flex-wrap gap-2" id="portfolio-filters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs font-semibold bg-brand-600 text-white transition-all cursor-pointer">All</button>
+                    <button data-filter="publication" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer">Publications (e-ISBN)</button>
+                    <button data-filter="innovation" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer">My Innovations</button>
+                    <button data-filter="supervisory" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer">Supervisory Projects</button>
+                </div>
+            </div>
+
+            <!-- Grid Kad Portfolio -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="portfolio-grid">
+                
+                <!-- Item 1: Siri Buku 5W1H IoT -->
+                <div data-category="publication" onclick="openProjectModal('5W1H Series in IoT & IR4.0', 'Publication • 4 e-ISBN Titles', '1. 5W1H in Internet of Things Fundamental 1st Edition (e-ISBN 978-629-98544-5-6)\n2. 5W1H in IoT Solution Development 1st Edition (e-ISBN 978-629-98544-6-3)\n3. 5W1H in Industrial Revolution 1st Edition (e-ISBN 978-629-98544-7-0)\n4. 5W1H in Open Systems Interconnection (OSI) Model 1st Edition (e-ISBN 978-629-98544-8-7)', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="5W1H IoT Books" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-brand-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">4 e-ISBN Books</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">5W1H Series in IoT &amp; IR4.0</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Publication &bull; 1st Edition</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Atok & Ojo Data Raya -->
+                <div data-category="publication" onclick="openProjectModal('Atok & Ojo Data Raya', 'Publication • e-ISBN 978-629-95079-9-4', 'A creative digital publication introducing Big Data concepts through an engaging storytelling approach tailored for students and general readers.', 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Atok & Ojo Data Raya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-indigo-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">e-ISBN Certified</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Atok &amp; Ojo Data Raya</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">e-ISBN 978-629-95079-9-4</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 3: IoT Composting Cycle (2 Gold, 2 Silver) -->
+                <div data-category="innovation" onclick="openProjectModal('Lean & MUDA Reduction in Composting Cycle Using IoT', 'Innovation • 2 Gold & 2 Silver Medals', '• Gold Medal - Lean in Composting Cycle Using IoT Technology (SIRIM Invention, Innovation and Technology Expo 2022 - SI2TE2022)\n• Gold Medal - MUDA Reduction in Composting Cycle (National Innovation and Invention Competition Through Exhibition 2021 - ICompEx 2021)\n• Silver Medal - Penggunaan IoT dan Pengurangan MUDA dalam Kitaran Kompos (NICETech21)\n• Silver Medal - MUDA Reduction in Composting Cycle (Indonesia Inventors Day, World Invention and Technology Expo 2021)', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="IoT Composting Cycle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">2 Gold &bull; 2 Silver</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">IoT Composting Cycle</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">SI2TE 2022 &bull; ICompEx 2021</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 4: ICSD & M-Unique -->
+                <div data-category="innovation" onclick="openProjectModal('Intelligent Controller Using Smart Devices (ICSD) & M-Unique', 'Innovation • 1 Silver & 3 Bronze Medals', '• Silver Medal - Eureka Innovation Exhibition 2016 (EIE 2016)\n• Bronze Medal - ITEX 2016 (International Invention & Innovation Exhibition)\n• Bronze Medal - MTE 2016 (Malaysian Technology Expo)\n• Bronze Medal - M-Unique Multi-Functional Lab Equipment (EIE 2016)', 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=600&q=80" alt="ICSD Smart Controller" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">ITEX &bull; MTE &bull; EIE</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Smart Controller (ICSD)</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">1 Silver &bull; 3 Bronze Medals</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 5: Egg Minder Pro (Supervisory Gold) -->
+                <div data-category="supervisory" onclick="openProjectModal('Egg Minder Pro (Supervisory Project)', 'Gold Medal • IIEF 2024', 'Student supervisory innovation project by Khairul Hafiz bin Khairul Baharin that won the Gold Medal at the International Innovation and Exhibition Fair 2024 (IIEF 2024).', 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80" alt="Egg Minder Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Gold Medal (IIEF 2024)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Egg Minder Pro</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Supervisory &bull; Gold Medal</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 6: Smart Home Voice Control (Supervisory 2 Gold) -->
+                <div data-category="supervisory" onclick="openProjectModal('Smart Home Voice Control & Google Assistant', '2 Gold Medals • ICompEx 2021 & AIREX 2020', 'Student supervisory projects by Ahmad Zulfaaiz Haikal bin Ab Aziz & Muhammad Danial bin Jasmi winning 2 Gold Medals at the National Innovation and Invention Competition Through Exhibition 2021 (ICompEx 2021) and Apprentice Innovation Research Exhibition (AIREX) 8th 2020.', 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="Smart Home Voice Control" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">2 Gold Medals</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Smart Home Voice IoT</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Supervisory &bull; ICompEx &amp; AIREX</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 7: IoT Medical Assistance & Campus Guard (Supervisory 2 Silver) -->
+                <div data-category="supervisory" onclick="openProjectModal('IoT Emergency Medical Assistance & Campus Guard', '2 Silver Medals • i-EIE 2023', 'Two supervisory innovation projects awarded Silver Medals at the International Eureka Innovation Exhibition 2023 (i-EIE 2023):\n1. IoT Based Emergency Medical Assistance for Efficient Patient Monitoring (Muhammad Adam Hakeemi bin Azami)\n2. Campus Guard: Secure Attendance Tracking and Alert with Key Safe Box (Muhammad Syuaib Soleh bin Hasnizam)', 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="IoT Medical & Campus Guard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">2 Silver (i-EIE 2023)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">IoT Medical &amp; Campus Guard</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Supervisory &bull; i-EIE 2023</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 8: Mentorship Kinesis Zone 2025 -->
+                <div data-category="supervisory" onclick="openProjectModal('Mentorship Kinesis Zone 2025', 'Bronze Medal • 1+1 International Innovation Competition', 'Student supervisory project by Erliessa Najwa binti Aswandi awarded the Bronze Medal at the 1+1 International Innovation Competition 2025.', 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80')" class="portfolio-item group cursor-pointer">
+                    <div class="bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] mb-4 border border-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Mentorship Kinesis Zone 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Bronze Medal 2025</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Kinesis Zone 2025</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Supervisory &bull; International</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 transition-all shrink-0">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         F. CAREER EXPERIENCE TIMELINE
+    =========================================== -->
+    <section id="experience" class="py-20 bg-slate-50/70 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Kolum Kiri: Tajuk -->
+                <div class="lg:col-span-4 space-y-3">
+                    <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">CAREER JOURNEY</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Work <span class="text-brand-600">Experience</span>
+                    </h2>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        Continuous dedication to developing highly skilled human capital in Electronic Engineering and the Internet of Things (IoT).
+                    </p>
+                </div>
+
+                <!-- Kolum Kanan: 4 Kad Pengalaman -->
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    
+                    <!-- Pengalaman 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-card relative">
+                        <span class="inline-block text-[11px] font-bold text-brand-600 bg-brand-50 px-3 py-1 rounded-full mb-3">
+                            January 2026 &ndash; Recent
+                        </span>
+                        <h4 class="text-base font-bold text-slate-900">Vocational Trainer</h4>
+                        <p class="text-xs font-semibold text-brand-600 mt-0.5">TVETMARA Petaling Jaya</p>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                            Department of Electronic - IoT Engineering. Training and mentoring TVET students in modern IoT technologies.
+                        </p>
+                    </div>
+
+                    <!-- Pengalaman 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-card">
+                        <span class="inline-block text-[11px] font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full mb-3">
+                            September 2018 &ndash; December 2025
+                        </span>
+                        <h4 class="text-base font-bold text-slate-900">Vocational Trainer</h4>
+                        <p class="text-xs font-semibold text-slate-700 mt-0.5">Kolej Kemahiran Tinggi MARA Petaling Jaya</p>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                            Department of Electronic - IoT Engineering. Spearheading student innovation projects and IoT curriculum modules.
+                        </p>
+                    </div>
+
+                    <!-- Pengalaman 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-card">
+                        <span class="inline-block text-[11px] font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full mb-3">
+                            January 2009 &ndash; October 2016
+                        </span>
+                        <h4 class="text-base font-bold text-slate-900">Vocational Trainer</h4>
+                        <p class="text-xs font-semibold text-slate-700 mt-0.5">Kolej Kemahiran Tinggi MARA Petaling Jaya</p>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                            Department of Electronic Engineering. Core instruction in electronic engineering and control systems.
+                        </p>
+                    </div>
+
+                    <!-- Pengalaman 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-card">
+                        <span class="inline-block text-[11px] font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full mb-3">
+                            March &ndash; December 2008
+                        </span>
+                        <h4 class="text-base font-bold text-slate-900">Research Assistant</h4>
+                        <p class="text-xs font-semibold text-slate-700 mt-0.5">University Malaya, Malaysia</p>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                            Faculty of Engineering, Department of Electrical Engineering. Electrical engineering research and development.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         G. CTA BANNER
+    =========================================== -->
+    <section class="bg-gradient-to-r from-brand-950 via-brand-900 to-blue-950 text-white py-16 relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-72 h-72 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                
+                <!-- Kiri: Teks Ajakan -->
+                <div class="text-center lg:text-left max-w-md space-y-2">
+                    <span class="text-[11px] font-bold tracking-widest text-brand-400 uppercase">COLLABORATION &amp; INVITATION</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold">Need a Trainer, Jury or Speaker?</h2>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Open for workshop invitations (IoT, Python, Power BI, AI, Canva), innovation competition judging, and research or publication collaborations.
+                    </p>
+                </div>
+
+                <!-- Tengah: Butang Utama -->
+                <div>
+                    <a href="https://wa.me/60162700575" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white hover:bg-brand-50 text-slate-900 font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105 cursor-pointer">
+                        Get in Touch
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-brand-600"></i>
+                    </a>
+                </div>
+
+                <!-- Kanan: 3 Jaminan Pantas -->
+                <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-400">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs font-semibold leading-tight">BEM &amp; MBOT<br>Registered</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-400">
+                            <i data-lucide="cpu" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs font-semibold leading-tight">IoT &amp; AI<br>Practitioner</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-400">
+                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs font-semibold leading-tight">Published<br>Author</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         H. FOOTER
+    =========================================== -->
+    <footer class="bg-brand-950 text-slate-400 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Logo -->
+                <div>
+                    <a href="#" class="text-2xl font-extrabold text-white tracking-tight">
+                        FauziLazim<span class="text-brand-500">.</span>
+                    </a>
+                    <p class="text-xs text-slate-500 mt-1">Mohamad Fauzi bin Mohd Lazim &bull; TVETMARA Petaling Jaya</p>
+                </div>
+
+                <!-- Pautan Navigasi Ringkas -->
+                <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="hover:text-white transition-colors">Credentials</a>
+                    <a href="#services" class="hover:text-white transition-colors">Training &amp; Jury</a>
+                    <a href="#portfolio" class="hover:text-white transition-colors">Publications &amp; Awards</a>
+                    <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+                <p>&copy; 2026 Mohamad Fauzi bin Mohd Lazim. All rights reserved.</p>
+                <p>TVET &bull; IoT Engineering &bull; Digital Innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         MODAL 1: CONTACT / INVITATION FORM
+    =========================================== -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeContactModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 cursor-pointer">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <h3 class="text-2xl font-extrabold text-slate-900">Get in Touch</h3>
+            <p class="text-sm text-slate-500 mt-1 mb-5">Contact directly via <strong>+60-162-700-575</strong> or send an inquiry below.</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Name / Organization</label>
+                    <input type="text" required placeholder="e.g., Dr. Ahmad / UiTM" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                    <input type="email" required placeholder="name@organization.edu.my" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Inquiry Purpose</label>
+                    <select class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600 bg-white">
+                        <option>Workshop / Training (IoT, Python, Power BI, AI, Canva)</option>
+                        <option>Innovation Competition Judge / Jury</option>
+                        <option>Speaker / Knowledge Sharing Session</option>
+                        <option>Publication / Research Collaboration</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Program Details</label>
+                    <textarea rows="3" required placeholder="Please include proposed dates, venue/platform, and brief details..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-full shadow-md transition-colors cursor-pointer">
+                    Send Inquiry
+                </button>
+            </form>
+
+            <!-- Mesej Berjaya -->
+            <div id="contact-success" class="hidden text-center py-6 space-y-3">
+                <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                    <i data-lucide="check" class="w-7 h-7"></i>
+                </div>
+                <h4 class="text-xl font-bold text-slate-900">Message Sent Successfully!</h4>
+                <p class="text-sm text-slate-500">Thank you for your invitation/inquiry. I will get back to you as soon as possible.</p>
+                <button onclick="closeContactModal()" class="mt-2 px-6 py-2.5 rounded-full bg-slate-900 text-white text-xs font-semibold cursor-pointer">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MODAL 2: PUBLICATION & AWARD DETAILS PREVIEW
+    =========================================== -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl relative">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 hover:bg-white flex items-center justify-center text-slate-800 shadow cursor-pointer">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <img id="modal-project-img" src="" alt="Preview" class="w-full h-52 object-cover bg-slate-100">
+            <div class="p-6 sm:p-8 space-y-3">
+                <span id="modal-project-cat" class="text-xs font-bold text-brand-600 uppercase tracking-wider">Category</span>
+                <h3 id="modal-project-title" class="text-xl sm:text-2xl font-extrabold text-slate-900">Title</h3>
+                <p id="modal-project-desc" class="text-sm text-slate-600 leading-relaxed whitespace-pre-line">Description goes here.</p>
+                <div class="pt-4 flex justify-end gap-3">
+                    <button onclick="closeProjectModal(); openContactModal();" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-5 py-3 rounded-full cursor-pointer">
+                        Contact for Collaboration
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT INTERAKTIVITI
+    =========================================== -->
+    <script>
+        lucide.createIcons();
+
+        // 1. Toggle Menu Mudah Alih
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Penapis Kategori Portfolio
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-600', 'text-white');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
+                btn.classList.add('bg-brand-600', 'text-white');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    const categories = item.getAttribute('data-category');
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 3. Kawalan Modal Hubungi
+        const contactModal = document.getElementById('contact-modal');
+        const contactForm = document.getElementById('contact-form');
+        const contactSuccess = document.getElementById('contact-success');
+
+        function openContactModal() {
+            contactForm.classList.remove('hidden');
+            contactSuccess.classList.add('hidden');
+            contactForm.reset();
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+        }
+
+        function closeContactModal() {
+            contactModal.classList.add('hidden');
+            contactModal.classList.remove('flex');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            contactForm.classList.add('hidden');
+            contactSuccess.classList.remove('hidden');
+        }
+
+        // 4. Kawalan Modal Pratonton Penerbitan & Anugerah
+        const projectModal = document.getElementById('project-modal');
+        function openProjectModal(title, category, desc, imgSrc) {
+            document.getElementById('modal-project-title').textContent = title;
+            document.getElementById('modal-project-cat').textContent = category;
+            document.getElementById('modal-project-desc').textContent = desc;
+            document.getElementById('modal-project-img').src = imgSrc;
+            projectModal.classList.remove('hidden');
+            projectModal.classList.add('flex');
+        }
+
+        function closeProjectModal() {
+            projectModal.classList.add('hidden');
+            projectModal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
